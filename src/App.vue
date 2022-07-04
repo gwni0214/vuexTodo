@@ -4,6 +4,7 @@
     </body>
 </template>
 
-<style lang="scss" scoped>
+<style>
   @import "style.scss";
+  @import url("./assets/icon/style.css");
 </style>
