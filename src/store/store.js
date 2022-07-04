@@ -4,8 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-    state: {
-        newTodoItem: "",
+    state: {        
         todoItems: [],
         toast: false,
         checked: 0,
@@ -18,19 +17,18 @@ export const store = new Vuex.Store({
     },
     mutations: {
         //데이터 추가하기
-        addTodo(state){
+        addTodo(state, payload){
             // console.log(JSON.stringify(state.newTodoItem));
-            if(state.newTodoItem !== ""){
+            if(payload !== ""){
                 let value = 
                     {
-                        id: state.newTodoItem,
+                        id: payload,
                         time: new Date,
                         isChecked: false
                     }                            
                 localStorage.setItem(JSON.stringify(value),JSON.stringify(value));
                 state.todoItems.push(value);
-                // console.log(JSON.stringify(state.todoItems));
-                state.newTodoItem = "";
+                // console.log(JSON.stringify(state.todoItems));                
             } else {
                 //토스트팝업 함수
                 state.toast = true;

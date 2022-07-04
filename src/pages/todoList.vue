@@ -52,7 +52,7 @@ export default {
         },
         toFix(){
             return this.$store.state.toFix;
-        }
+        },        
     },
     methods: {
         checkedItem(index){

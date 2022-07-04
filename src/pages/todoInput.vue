@@ -1,7 +1,7 @@
 <template>
     <div class="todo-input">
         <div class="todo-input__box">
-            <input type="text" placeholder="할 일을 입력해주세요!" v-model="$store.state.newTodoItem" @keyup.enter="addTodo">
+            <input type="text" placeholder="할 일을 입력해주세요!" v-model="newTodoItem" @keyup.enter="addTodo">
             <span class="todo-input__box__add" @click="addTodo">
                 <i class="icon-plus"></i>
             </span>
@@ -12,10 +12,17 @@
 
 <script>
 
-export default {    
+export default {
+    data(){
+        return {
+            newTodoItem: ""
+        }
+    },    
     methods: {
         addTodo(){
-            this.$store.commit('addTodo');
+            let item = this.newTodoItem
+            this.$store.commit('addTodo', item);
+            this.newTodoItem = "";
         }
     }
 }
