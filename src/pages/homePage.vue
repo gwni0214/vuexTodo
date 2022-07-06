@@ -1,6 +1,7 @@
 <template>
     <div>
         <todoHeader></todoHeader>
+        <todoSearch></todoSearch>
         <todoInput></todoInput>
         <todoList></todoList>
         <todoFooter></todoFooter>

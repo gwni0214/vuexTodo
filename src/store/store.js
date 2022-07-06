@@ -11,11 +11,36 @@ export const store = new Vuex.Store({
         modal: false,
         toFix: false,
         fixItem: "",
+        
     },
     getters: {
 
     },
     mutations: {
+        //검색하기
+        searchTodo(state, payload){
+            if(payload !== ""){               
+                let arr = JSON.parse(JSON.stringify(state.todoItems));                
+                arr.forEach(element => {                    
+                    if(!element.id.includes(payload)){                        
+                        let index = arr.indexOf(element);                        
+                        element.search = false;
+                        let searchedArr = [];
+                        searchedArr.push(element);                        
+                        state.todoItems.splice(index,1,searchedArr[0]);
+                    }                        
+                });
+            } else {
+                let arr = JSON.parse(JSON.stringify(state.todoItems));
+                arr.forEach(el => {
+                    let index = arr.indexOf(el);
+                    el.search = true;
+                    let searchedArr = [];
+                    searchedArr.push(el);
+                    state.todoItems.splice(index,1,searchedArr[0]);
+                })
+            }
+        },
         //데이터 추가하기
         addTodo(state, payload){
             // console.log(JSON.stringify(state.newTodoItem));
@@ -24,7 +49,8 @@ export const store = new Vuex.Store({
                     {
                         id: payload,
                         time: new Date,
-                        isChecked: false
+                        isChecked: false,
+                        search: true,
                     }                            
                 localStorage.setItem(JSON.stringify(value),JSON.stringify(value));
                 state.todoItems.push(value);
@@ -68,7 +94,8 @@ export const store = new Vuex.Store({
                     {
                         id: state.fixItem,
                         time: new Date,
-                        isChecked: false
+                        isChecked: false,
+                        search: true,
                     };
                 localStorage.removeItem(JSON.stringify(indexItem));
                 state.todoItems.splice(index, 1);

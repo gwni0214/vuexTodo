@@ -1,7 +1,9 @@
 <template>
     <div class="list-wrap">
         <transition-group name="list" tag="ul">
-            <li v-for="(todoItem, index) in todoItems" :key="index">
+            <li v-for="(todoItem, index) in todoItems" :key="index"
+            v-show="todoItem.search"
+            >
                 <!-- 체크 -->
                 <span class="list__check-field">
                     <i class="icon-checkmark"
@@ -52,6 +54,9 @@ export default {
         },
         toFix(){
             return this.$store.state.toFix;
+        },
+        search(){
+            return this.$store.state.search;
         },        
     },
     methods: {

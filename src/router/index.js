@@ -6,6 +6,7 @@ import todoInput from "../pages/todoInput.vue";
 import todoList from "../pages/todoList.vue";
 import todoFooter from "../pages/todoFooter.vue";
 import todoHeader from "../pages/todoHeader.vue";
+import todoSearch from "../pages/todoSearch.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,11 @@ const routes = [
         path: "/footer",
         name: "footer",
         component: todoFooter
+    },
+    {
+        path: "/search",
+        name: "search",
+        component: todoSearch
     },
 ]
 

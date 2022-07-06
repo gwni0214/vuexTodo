@@ -9,6 +9,7 @@ import todoList from './pages/todoList.vue';
 import todoFooter from './pages/todoFooter.vue';
 import ToastPop from './components/ToastPop.vue';
 import ModalPop from './components/ModalPop.vue';
+import todoSearch from './pages/todoSearch.vue';
 
 Vue.config.productionTip = false
 
@@ -19,6 +20,7 @@ Vue.component('todoList', todoList);
 Vue.component('todoFooter', todoFooter);
 Vue.component('ToastPop', ToastPop);
 Vue.component('ModalPop', ModalPop);
+Vue.component('todoSearch', todoSearch);
 
 new Vue({
   render: h => h(App),
