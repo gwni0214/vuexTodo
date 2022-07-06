@@ -5,8 +5,7 @@
         <todoInput></todoInput>
         <todoList></todoList>
         <todoFooter></todoFooter>
-    </div>
-    
+    </div>    
 </template>
 
 <script>

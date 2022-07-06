@@ -19,8 +19,8 @@ export const store = new Vuex.Store({
     mutations: {
         //검색하기
         searchTodo(state, payload){
+            let arr = JSON.parse(JSON.stringify(state.todoItems));                
             if(payload !== ""){               
-                let arr = JSON.parse(JSON.stringify(state.todoItems));                
                 arr.forEach(element => {                    
                     if(!element.id.includes(payload)){                        
                         let index = arr.indexOf(element);                        
@@ -30,8 +30,7 @@ export const store = new Vuex.Store({
                         state.todoItems.splice(index,1,searchedArr[0]);
                     }                        
                 });
-            } else {
-                let arr = JSON.parse(JSON.stringify(state.todoItems));
+            } else {                
                 arr.forEach(el => {
                     let index = arr.indexOf(el);
                     el.search = true;
