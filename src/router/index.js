@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 
 const routes = [
     {
-        path: "/",
+        path: "/vuexTodo",
         name: "home",
         component: homePage
     },
