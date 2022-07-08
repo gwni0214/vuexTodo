@@ -1,6 +1,9 @@
 # vuextodo
 ## https://gwni0214.github.io/vuexTodo/
 
+# v1.6
+    검색하기 한글 밀림 현상 수정
+
 # v1.5
     새로고침 기능 수정 (새로고침 해도 체크가 안없어지게)
 

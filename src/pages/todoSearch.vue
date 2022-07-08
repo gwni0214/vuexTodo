@@ -1,7 +1,7 @@
 <template>
     <div class="todo-search">
         <div class="todo-search__box">
-            <input type="text" placeholder="검색어를 입력해주세요." v-model="searchItem" @keyup="searchTodo">            
+            <input type="text" placeholder="검색어를 입력해주세요." v-bind:value="searchItem" @input="updateInput" @keyup="searchTodo">            
         </div>        
     </div>
 </template>
@@ -12,11 +12,14 @@ export default {
         return {
             searchItem: ""
         }
-    },
+    },    
     methods: {
+        //v-bind:value="searchItem" @input="updateInput"
+        updateInput(e){
+            this.searchItem = e.target.value;
+        },
         searchTodo(){
-            let item = this.searchItem
-            // console.log(this.searchItem);
+            let item = this.searchItem            
             this.$store.commit('searchTodo', item);
         }
     }
