@@ -36,7 +36,8 @@ export const store = new Vuex.Store({
                         state.todoItems.splice(index,1,searchedArr[0]);
                     }                        
                 });
-            } else {                
+            } else {
+                //input이 공백일때 전부 true                
                 arr.forEach(el => {
                     let index = arr.indexOf(el);
                     el.search = true;
@@ -140,7 +141,7 @@ export const store = new Vuex.Store({
         modalClose(state){
             state.modal = false;
         },
-        //모달 리무브
+        //선택한 아이템 삭제하기
         modalRemove(state){
             // console.log(state.checked);
             let index = state.checked;

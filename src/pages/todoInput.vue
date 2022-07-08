@@ -40,7 +40,7 @@ export default {
         border-radius: 0.3rem;
         input {
             border-style: none;
-            font-size: 1.5rem;
+            font-size: 1.5rem;        
         }
         &__add {
             float: right;
