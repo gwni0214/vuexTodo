@@ -110,11 +110,23 @@ export const store = new Vuex.Store({
             let index = state.checked;
             let indexItem = JSON.parse(JSON.stringify(state.todoItems[index]));
             if(indexItem.isChecked == false){
+                //localStorage 데이터 삭제 (이게 먼저실행 되어야 함)
+                localStorage.removeItem(JSON.stringify(indexItem));
+
                 indexItem.isChecked = true;
                 checkingIndex.push(indexItem);
+
+                //localStorage 수정된 데이터 추가
+                localStorage.setItem(JSON.stringify(checkingIndex[0]), JSON.stringify(checkingIndex[0]));
             } else {
+                //localStorage 데이터 삭제 (이게 먼저실행 되어야 함)
+                localStorage.removeItem(JSON.stringify(indexItem));
+
                 indexItem.isChecked = false;
                 checkingIndex.push(indexItem);
+
+                //localStorage 수정된 데이터 추가
+                localStorage.setItem(JSON.stringify(checkingIndex[0]), JSON.stringify(checkingIndex[0]));
             }
             state.todoItems.splice(index, 1, checkingIndex[0]);
         },
