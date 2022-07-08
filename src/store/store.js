@@ -18,10 +18,7 @@ export const store = new Vuex.Store({
     },
     mutations: {
         //검색하기
-        searchTodo(state, payload){
-            console.log(payload);
-            console.log('검색 실행');
-            
+        searchTodo(state, payload){                       
             let arr = JSON.parse(JSON.stringify(state.todoItems));                
             if(payload !== ""){               
                 arr.forEach(element => {                    

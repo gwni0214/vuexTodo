@@ -13,8 +13,7 @@ export default {
             searchItem: ""
         }
     },    
-    methods: {
-        //v-bind:value="searchItem" @input="updateInput"
+    methods: {        
         updateInput(e){
             this.searchItem = e.target.value;
         },
