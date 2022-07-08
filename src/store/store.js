@@ -87,20 +87,21 @@ export const store = new Vuex.Store({
             state.toFix = !state.toFix;
             let index = state.checked;
             let indexItem = JSON.parse(JSON.stringify(state.todoItems[index]));
+            let fixedItem = [];
             console.log(index);
-            if(state.fixItem !== ""){
-                let value = 
-                    {
-                        id: state.fixItem,
-                        time: new Date,
-                        isChecked: false,
-                        search: true,
-                    };
+            if(state.fixItem !== ""){                
+                
+                //localStorage 데이터 삭제 (이게 먼저실행 되어야 함)
                 localStorage.removeItem(JSON.stringify(indexItem));
-                state.todoItems.splice(index, 1);
-                localStorage.setItem(JSON.stringify(value),JSON.stringify(value));
-                state.todoItems.push(value);
-                state.fixItem = "";
+
+                //데이터 수정
+                indexItem.id = state.fixItem;                
+                fixedItem.push(indexItem);
+
+                //localStorage 수정된 데이터 추가
+                localStorage.setItem(JSON.stringify(fixedItem[0]), JSON.stringify(fixedItem[0]));
+                //todoItems 배열의 순서 지키기.              
+                state.todoItems.splice(index, 1, fixedItem[0]);
             }
         },
         //체크하기

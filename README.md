@@ -1,7 +1,11 @@
 # vuextodo
 ## https://gwni0214.github.io/vuexTodo/
+
+# v1.4
+    수정하기 기능 수정 (바뀌어도 순서 유지하기)
+
 # v1.3
-    Mixin 사용해보기
+    Mixin 사용해보기 (개념이해 정도)
 
 # v1.2
     검색기능 구현.
