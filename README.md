@@ -2,7 +2,7 @@
 ## https://gwni0214.github.io/vuexTodo/
 
 # v1.7
-    수정된 사항 재빌드
+     vuex action 사용해보기 빌드(x)
 
 # v1.6
     검색하기 한글 밀림 현상 수정

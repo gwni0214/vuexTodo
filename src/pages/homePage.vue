@@ -16,6 +16,9 @@
                 </transition>
             </div>
         </div> -->
+        <div>
+            <button @click="testFunc">{{ this.$store.state.test }}</button>
+        </div>
     </div>    
 </template>
 
@@ -32,6 +35,9 @@ export default {
          this.createdPush();
     },  
     methods: {
+        testFunc(){
+            this.$store.dispatch('TIME', 'test2');
+        },
         // clickBtn(){            
         //     this.clicked = !this.clicked;
         //     console.log(this.clicked);

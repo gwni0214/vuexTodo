@@ -11,12 +11,24 @@ export const store = new Vuex.Store({
         modal: false,
         toFix: false,
         fixItem: "",
+        test: "test1",
         
     },
     getters: {
 
     },
+    actions: {
+        //비동기 호출하기
+        TIME({commit}, payload){
+            return setTimeout(()=> {
+                commit('testFunc', payload);
+            },2000)
+        }
+    },
     mutations: {
+        testFunc(state, payload){
+            state.test = payload;
+        },
         //검색하기
         searchTodo(state, payload){                       
             let arr = JSON.parse(JSON.stringify(state.todoItems));                
