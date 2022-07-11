@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
         modal: false,
         toFix: false,
         fixItem: "",
-        test: "test1",
+        test: true,
         
     },
     getters: {
@@ -19,15 +19,15 @@ export const store = new Vuex.Store({
     },
     actions: {
         //비동기 호출하기
-        TIME({commit}, payload){
+        TIME({commit}){
             return setTimeout(()=> {
-                commit('testFunc', payload);
+                commit('testFunc');
             },2000)
         }
     },
     mutations: {
-        testFunc(state, payload){
-            state.test = payload;
+        testFunc(state){
+            state.test = !state.test;
         },
         //검색하기
         searchTodo(state, payload){                       

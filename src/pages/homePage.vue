@@ -36,7 +36,7 @@ export default {
     },  
     methods: {
         testFunc(){
-            this.$store.dispatch('TIME', 'test2');
+            this.$store.dispatch('TIME');
         },
         // clickBtn(){            
         //     this.clicked = !this.clicked;
