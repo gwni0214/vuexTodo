@@ -10,6 +10,7 @@ import todoFooter from './pages/todoFooter.vue';
 import ToastPop from './components/ToastPop.vue';
 import ModalPop from './components/ModalPop.vue';
 import todoSearch from './pages/todoSearch.vue';
+import DayAndNight from './components/DayAndNight.vue';
 
 Vue.config.productionTip = false
 
@@ -21,6 +22,7 @@ Vue.component('todoFooter', todoFooter);
 Vue.component('ToastPop', ToastPop);
 Vue.component('ModalPop', ModalPop);
 Vue.component('todoSearch', todoSearch);
+Vue.component('DayAndNight', DayAndNight);
 
 
 new Vue({

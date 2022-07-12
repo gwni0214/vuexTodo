@@ -98,9 +98,12 @@ export default {
             .list__text-field {
                 width: 50%;
                 white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 margin-left: 1rem;
                 font-size: 2rem;
                 cursor: pointer;
+
             }
             .button-group {
                 width: 5rem;

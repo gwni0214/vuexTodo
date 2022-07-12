@@ -27,20 +27,41 @@ export default {
     }
     .toast {
         position: fixed;
-        top: 20%;
+        top: 22%;
         left: 70%;
         transform: translate(-50%, -50%);
-        width: 12rem;
-        height: 3rem;
-        border-radius: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
         background-color: rgba(0,0,0,0.2);
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
         &__text {
             span {
                 color: red;
             }
         }
+    }
+    @media screen and (max-width: 1025px) {
+        .toast {
+            top: 22%;
+            left: 80%;
+         
+        }
+    }
+    @media screen and (max-width: 599px) {
+        .toast {
+            top: 18%;
+            left: 70%;
+           
+        }
+    }
+    @media screen and (max-width: 320px) {
+       .toast {
+            top: 25%;
+            left: 50%;
+         
+        } 
     }
 </style>
