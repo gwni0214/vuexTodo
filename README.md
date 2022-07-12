@@ -1,6 +1,13 @@
 # vuextodo
 ## https://gwni0214.github.io/vuexTodo/
 
+# 실행방법
+    npm run serve
+
+    빌드
+    
+    npm run build
+
 # v1.7
      vuex action 사용해보기 빌드(x)
 
