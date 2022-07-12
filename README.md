@@ -8,6 +8,9 @@
     
     npm run build
 
+# v1.8
+     토스트팝업 위치 조정, 반응형 작업
+
 # v1.7
      vuex action 사용해보기 빌드(x)
 
