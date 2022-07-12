@@ -5,9 +5,17 @@
     box-sizing: border-box;
 }
 body {
+    height: 100vh;
     margin: 0 auto;
     text-align: center;
     background-color: #f6f6f8;
+}
+body.day {
+    background-color: #000;
+}
+body.dark {
+    background-color: #333;
+    color: #fff;
 }
 
     //미디어쿼리

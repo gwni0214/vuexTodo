@@ -12,6 +12,8 @@ export const store = new Vuex.Store({
         toFix: false,
         fixItem: "",
         test: true,
+        day: 'dark'
+       
         
     },
     getters: {

@@ -8,6 +8,9 @@
     
     npm run build
 
+# v1.9
+     storybook 추가, 수정사항 빌드
+
 # v1.8
      토스트팝업 위치 조정, 반응형 작업
 
